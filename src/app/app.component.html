@@ -1,22 +1,24 @@
-<h1 style="color: rgb(207, 3, 3);">First Angular App</h1>
-<courses></courses>
-Name : {{firstName}} {{lastName}} <br/>
-Email : {{email}} <br>
-Phone : {{phone}}<br>
-Age : {{age}}<br>
-Hobby : {{hobbies[0]}}<br>
-Address : {{address.street}}, {{address.city}}, {{address.State}}<br><br>
-<h2>Two way binding example</h2>
-First Number : <input type="number" [(ngModel)]="n1"><br>
-Second Number : <input type="number" [(ngModel)]="n2"><br>
-<p>Sum : {{n1+n2}}</p><br><br>
+<h1>Uppercase Pipe</h1>
+<b>{{title | uppercase}}</b><br>
 
-<ul> 
-    <li *ngFor="let employee of Employee "> 
-    <h3>{{employee.id}}</h3> 
-    <p> {{employee.employee_name}} </p> 
-    <p> {{employee.employee_salary}} </p> 
-    <p> {{employee.employee_age}} </p> 
-    <p> {{employee.profile_image}} </p> 
-    </li> 
-</ul>
+<h1>Lowercase Pipe</h1>
+<b>{{title  | lowercase}}</b><br>
+
+<h1>Date Pipe</h1>
+<b>{{currentdate | date:'yyyy'}}</b><br>
+<b>{{currentdate | date:'fullDate'}}</b><br>
+
+<h1>Decimal Pipe</h1>
+<b>{{278.89 | number: '3.4'}}</b><br>
+
+<h1>Currency Pipe</h1>
+<b>{{6589.23 | currency:"USD"}}</b><br>
+
+<h1>JSON Pipe</h1>
+<b>{{ js | json }}</b><br>
+
+<h1>Percent Pipe</h1>
+<b>{{ 00.7645 | percent }}</b><br>
+
+<h1>Slice Pipe</h1>
+<b>{{ courses | slice:2:6 }}</b><br>
